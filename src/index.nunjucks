@@ -2,7 +2,7 @@
 
 {% import "_modules/link/link.nunjucks" as link %}
 
-{% block headline %}This is my headline{% endblock %}
+{% block headline %}A South L.A neighborhood grapples with a wave of violence{% endblock %}
 {% block byline %}By Vanessa Gaie{% endblock %}
 {% block pubdate %} 
 <time datetime="2020-03-07" pubdate>
@@ -11,7 +11,22 @@
 {% endblock %} 
 
 {% block content %}
+<h3>One corner. Four killings</h3>
+<div id="map"></div>
 
+<section>
+  <h3>A South L.A neighborhood stands apart</h3>
+  <p>Harvard Park's 2016 homicide total was its highest is 15 years</p>
+</section>
+<div class="charts">
+  <div class="inline-chart" id="county-homicides">
+    <h4 class="chart-title">County Homicides, 2000-2017</h4>
+  </div>
+  <div class="inline-chart" id="harvard-park-homicides">
+    <h4 class="chart-title">Harvard Park Homicides, 2000-2017 </h4>
+  </div>
+</div>
+<section>
 <h3>Lives lost in Harvard Park</h3>
 <p>The {{ site.data.harvard_park_homicides|length }} homicides in Harvard Park since 2000 were primarily black and Latino males, but the list includes husbands, wives, fathers, mothers of all ages, and even some small children.</p>
 <div class="card-columns">
@@ -33,4 +48,5 @@
     </div>
 {% endfor %}
 </div>
+</section>
 {% endblock %}
